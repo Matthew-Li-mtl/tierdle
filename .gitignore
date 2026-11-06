@@ -1,6 +1,7 @@
 node_modules
 dist
 .env
+.env.example
 .vercel
 session-history
 STUDY_GUIDE.md
