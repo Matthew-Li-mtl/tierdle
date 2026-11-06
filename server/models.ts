@@ -1,5 +1,6 @@
 // Every MongoDB collection in the app is defined in this one file.
 import mongoose, { Schema } from 'mongoose';
+import { TIERS } from '../shared/types.js';
 
 const userSchema = new Schema({
   email: { type: String, required: true, unique: true },
@@ -32,27 +33,33 @@ const postSchema = new Schema(
     username: { type: String, required: true }, // copied from User so feeds need no join
     day: { type: String, required: true },
     tiers: {
+      SS: [String],
       S: [String],
       A: [String],
       B: [String],
       C: [String],
       D: [String],
+      F: [String],
     },
-    likeCount: { type: Number, default: 0 },
+    // Copies of what the ratings add up to, so feeds need no counting.
+    // score is the points total the popular feed sorts by. It is never sent to the browser.
+    score: { type: Number, default: 0 },
+    ratingCounts: Object.fromEntries(TIERS.map((tier) => [tier, { type: Number, default: 0 }])),
   },
   { timestamps: { createdAt: true, updatedAt: false } },
 );
 postSchema.index({ user: 1, day: 1 }, { unique: true }); // one post per user per day
 postSchema.index({ day: 1, createdAt: -1, _id: -1 }); // the recent feed
-postSchema.index({ day: 1, likeCount: -1, _id: -1 }); // the popular feed
+postSchema.index({ day: 1, score: -1, _id: -1 }); // the popular feed
 export const Post = mongoose.model('Post', postSchema);
 
-const likeSchema = new Schema({
+const ratingSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   post: { type: Schema.Types.ObjectId, ref: 'Post', required: true },
+  tier: { type: String, enum: TIERS, required: true },
 });
-likeSchema.index({ user: 1, post: 1 }, { unique: true }); // one like per user per post
-export const Like = mongoose.model('Like', likeSchema);
+ratingSchema.index({ user: 1, post: 1 }, { unique: true }); // one rating per user per post
+export const Rating = mongoose.model('Rating', ratingSchema);
 
 const refreshTokenSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true },

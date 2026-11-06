@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <h1>{prompt.title}</h1>
-      <p className="muted">A new tier list arrives every day at midnight UTC.</p>
+      <p className="muted">New tier list at midnight UTC!</p>
 
       {myPost ? (
         <section>

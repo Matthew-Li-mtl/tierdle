@@ -1,7 +1,15 @@
-// The two feeds of today's posts, and the like button. Anyone can read; liking needs an account.
+// The two feeds of today's posts, and the rating buttons. Anyone can read; rating needs an account.
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { FeedResponse, FeedSort, Item, PostView } from '../../shared/types.js';
+import {
+  TIERS,
+  type FeedResponse,
+  type FeedSort,
+  type Item,
+  type PostView,
+  type RatingResult,
+  type Tier,
+} from '../../shared/types.js';
 import { api } from '../api.js';
 import { useAuth } from '../auth.js';
 import TierRows from './TierRows.js';
@@ -82,35 +90,67 @@ function PostCard(props: {
   const { post, items, onChange } = props;
   const { user } = useAuth();
   const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
 
-  async function toggleLike() {
+  // Tapping your current rating again removes it.
+  async function rate(tier: Tier) {
     setError('');
+    setBusy(true);
     try {
-      const method = post.likedByMe ? 'DELETE' : 'POST';
-      onChange(post.id, await api<Partial<PostView>>(`/posts/${post.id}/like`, method));
+      const result =
+        tier === post.myRating
+          ? await api<RatingResult>(`/posts/${post.id}/rating`, 'DELETE')
+          : await api<RatingResult>(`/posts/${post.id}/rating`, 'PUT', { tier });
+      onChange(post.id, result);
     } catch (caught) {
       setError((caught as Error).message);
+    } finally {
+      setBusy(false);
     }
   }
+
+  const canRate = user && post.username !== user.username;
+  const rated = TIERS.filter((tier) => post.ratingCounts[tier] > 0);
 
   return (
     <article className="post">
       <div className="post-header">
         <strong>{post.username}</strong>
-        {user && post.username !== user.username ? (
-          <button className={post.likedByMe ? 'like liked' : 'like'} aria-pressed={post.likedByMe} onClick={toggleLike}>
-            Like {post.likeCount}
-          </button>
-        ) : user ? (
-          <span className="muted">{post.likeCount} likes</span>
+        {rated.length > 0 ? (
+          <span className="rating-counts" aria-label="Ratings">
+            {rated.map((tier) => (
+              <span key={tier} className={`rating-count tier-${tier}`}>
+                {post.ratingCounts[tier]} {tier}
+              </span>
+            ))}
+          </span>
         ) : (
-          <Link to="/signin" className="like">
-            Like {post.likeCount}
-          </Link>
+          <span className="muted">No ratings yet</span>
         )}
       </div>
-      {error && <p className="error">{error}</p>}
       <TierRows tiers={post.tiers} items={items} />
+      {canRate ? (
+        <div className="rating" role="group" aria-label={`Rate ${post.username}'s list`}>
+          {TIERS.map((tier) => (
+            <button
+              key={tier}
+              className={post.myRating === tier ? `rate tier-${tier} chosen` : `rate tier-${tier}`}
+              aria-pressed={post.myRating === tier}
+              disabled={busy}
+              onClick={() => rate(tier)}
+            >
+              {tier}
+            </button>
+          ))}
+        </div>
+      ) : (
+        !user && (
+          <Link to="/signin" className="muted">
+            Sign in to rate this list
+          </Link>
+        )
+      )}
+      {error && <p className="error">{error}</p>}
     </article>
   );
 }

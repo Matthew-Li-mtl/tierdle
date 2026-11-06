@@ -11,7 +11,7 @@ type RowName = Tier | 'unranked';
 type Rows = Record<RowName, string[]>;
 
 function emptyRows(prompt: Prompt): Rows {
-  return { S: [], A: [], B: [], C: [], D: [], unranked: prompt.items.map((item) => item.slug) };
+  return { SS: [], S: [], A: [], B: [], C: [], D: [], F: [], unranked: prompt.items.map((item) => item.slug) };
 }
 
 // Restores a list in progress, so nothing is lost when a guest leaves to sign in.
@@ -20,7 +20,8 @@ function loadRows(prompt: Prompt): Rows {
     const saved: Rows = JSON.parse(localStorage.getItem(`tierdle:${prompt.day}`) ?? '');
     const savedSlugs = Object.values(saved).flat().sort();
     const slugs = prompt.items.map((item) => item.slug).sort();
-    if (savedSlugs.join() === slugs.join()) return saved;
+    // Progress saved before SS and F existed has no rows for them, so add them empty.
+    if (savedSlugs.join() === slugs.join()) return { ...emptyRows(prompt), ...saved };
   } catch {
     // Nothing saved yet, or storage is unavailable.
   }
@@ -71,7 +72,7 @@ export default function TierBuilder(props: { prompt: Prompt; onPosted: (post: Po
   async function post() {
     setError('');
     try {
-      const tiers: Tiers = { S: rows.S, A: rows.A, B: rows.B, C: rows.C, D: rows.D };
+      const tiers = Object.fromEntries(TIERS.map((tier) => [tier, rows[tier]])) as Tiers;
       onPosted(await api<PostView>('/posts', 'POST', { day: prompt.day, tiers }));
       localStorage.removeItem(`tierdle:${prompt.day}`);
     } catch (caught) {

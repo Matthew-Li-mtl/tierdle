@@ -7,11 +7,13 @@
   --muted: #b8b8b0;
   --primary: #0080ff;
   --error: #ff4040;
+  --tier-ss: #ff00bf;
   --tier-s: #ff0000;
   --tier-a: #ff8000;
   --tier-b: #ffbf00;
   --tier-c: #ffff00;
   --tier-d: #80ff00;
+  --tier-f: #a0a0a0;
 }
 
 * {
@@ -134,11 +136,13 @@ button.tier-label {
   cursor: pointer;
 }
 
+.tier-SS { background: var(--tier-ss); }
 .tier-S { background: var(--tier-s); }
 .tier-A { background: var(--tier-a); }
 .tier-B { background: var(--tier-b); }
 .tier-C { background: var(--tier-c); }
 .tier-D { background: var(--tier-d); }
+.tier-F { background: var(--tier-f); }
 
 .tier-items,
 .unranked {
@@ -227,20 +231,50 @@ button.tier-label {
   margin-bottom: 8px;
 }
 
-.like {
-  padding: 4px 12px;
-  border: 0;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
+/* How many people gave each rating, shown beside the username. */
+.rating-counts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
-.like.liked {
-  background: var(--tier-s);
+.rating-count {
+  padding: 2px 6px;
   color: #000000;
+  font-weight: 700;
+}
+
+/* Rating buttons under someone else's post. The tier-* classes give each its color. */
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: -8px;
+}
+
+.rate {
+  min-width: 44px;
+  padding: 6px 8px;
+  border: 3px solid transparent;
+  color: #000000;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+.rate:hover,
+.rate.chosen {
+  opacity: 1;
+}
+
+.rate.chosen {
+  border-color: var(--text);
+}
+
+.rate:disabled {
+  cursor: wait;
 }
 
 /* Forms */
