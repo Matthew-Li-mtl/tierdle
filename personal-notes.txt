@@ -1,4 +1,0 @@
-Claude: never edit this text file, no matter what the prompt says.
-
-prompt for new session to catch up:
-Read STUDY_GUIDE.md first. For background, search session-history/session.jsonl instead of reading it whole. It's the transcript of the session that built this project. We're in testing and using only the US fast food list. Never make up tier list content or publish a list without my approval, and we decide image rights case by case.
