@@ -1,3 +1,6 @@
 # Tierdle
 
-Make the same daily tier list, and vote on others' posts from a scale of D to S!
+Make a tier list from the same daily prompt as everyone else, and vote on others' posts!
+[https://daily-tierdle.vercel.app]https://daily-tierdle.vercel.app
+
+Typescript, React, Express, MongoDB, Vercel.
