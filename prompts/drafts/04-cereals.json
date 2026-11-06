@@ -1,0 +1,76 @@
+{
+  "day": "",
+  "title": "Popular cereals",
+  "items": [
+    {
+      "slug": "honey-nut-cheerios",
+      "label": "Honey Nut Cheerios",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c4/Honey_nut_cheerios_%28revised%29.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Honey_Nut_Cheerios"
+    },
+    {
+      "slug": "frosted-flakes",
+      "label": "Frosted Flakes",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Frostedflakes_brand_logo.png/330px-Frostedflakes_brand_logo.png",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Frosted_Flakes"
+    },
+    {
+      "slug": "honey-bunches-of-oats",
+      "label": "Honey Bunches of Oats",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/08/Honey_bunches_oat_logo.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Honey_Bunches_of_Oats"
+    },
+    {
+      "slug": "cinnamon-toast-crunch",
+      "label": "Cinnamon Toast Crunch",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Cinnamon_toastcrunch_logo.png/330px-Cinnamon_toastcrunch_logo.png",
+      "credit": "General Mills, Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Cinnamon_Toast_Crunch"
+    },
+    {
+      "slug": "cheerios",
+      "label": "Cheerios",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Cheerios_with_Happy_Heart_Shapes.jpg/330px-Cheerios_with_Happy_Heart_Shapes.jpg",
+      "credit": "Th78blue, CC BY-SA 4.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Cheerios"
+    },
+    {
+      "slug": "frosted-mini-wheats",
+      "label": "Frosted Mini-Wheats",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Frosted_Mini-Wheats_logo.svg/330px-Frosted_Mini-Wheats_logo.svg.png",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Frosted_Mini-Wheats"
+    },
+    {
+      "slug": "froot-loops",
+      "label": "Froot Loops",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9d/Frootloops_brand_logo.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Froot_Loops"
+    },
+    {
+      "slug": "lucky-charms",
+      "label": "Lucky Charms",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lucky_charms_brand_logo.png",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Lucky_Charms"
+    },
+    {
+      "slug": "raisin-bran",
+      "label": "Raisin Bran",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Raisin-Bran-Bowl.jpg/330px-Raisin-Bran-Bowl.jpg",
+      "credit": "Evan-Amos, Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Raisin_bran"
+    },
+    {
+      "slug": "special-k",
+      "label": "Special K",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Specialk_brand_logo.png/330px-Specialk_brand_logo.png",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Special_K"
+    }
+  ]
+}

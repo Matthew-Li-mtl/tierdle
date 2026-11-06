@@ -1,0 +1,132 @@
+{
+  "day": "",
+  "title": "Popular albums from the 2010s",
+  "items": [
+    {
+      "slug": "21",
+      "label": "21",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/eb/ca/25/ebca2596-cd1e-b295-91a3-771c868d0a79/191404113868.png/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/21/1544491232"
+    },
+    {
+      "slug": "frozen-original-motion-picture-soundtrack",
+      "label": "Frozen (Original Motion Picture Soundtrack)",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4c/5d/31/4c5d3166-3a4b-fb3c-473e-1776ff947466/13DMGIM04437.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/frozen-original-motion-picture-soundtrack/1440618177"
+    },
+    {
+      "slug": "views",
+      "label": "Views",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/f5/87/95f587f7-21c3-d5f9-d81a-4350f9caa020/16UMGIM27643.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/views/1440842556"
+    },
+    {
+      "slug": "1989",
+      "label": "1989",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/4a/4a/894a4ab9-b0b0-9ea5-ca41-8da0b9b79453/14UMDIM03405.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/1989/1440935467"
+    },
+    {
+      "slug": "25",
+      "label": "25",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/08/8c/24/088c2405-2e33-801b-5c38-e967f2c01e69/191404113974.png/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/25/1544494115"
+    },
+    {
+      "slug": "recovery",
+      "label": "Recovery",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/95/a4/2c/95a42c0d-f3c8-c70d-3e3a-93cfa4a516d4/00602527394558.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/recovery/1440781199"
+    },
+    {
+      "slug": "red",
+      "label": "Red",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/0d/7e/250d7e42-3a2f-19ac-f865-f1e04a4a1f97/12UMDIM01007.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/red/1440935340"
+    },
+    {
+      "slug": "speak-now",
+      "label": "Speak Now",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/23/57/d423579f-24f7-5c82-ed10-fbfd21ceef25/10UMDIM00487.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/speak-now/1440920310"
+    },
+    {
+      "slug": "christmas",
+      "label": "Christmas",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/37/2d/6e/372d6e16-7a32-91f0-1a03-0f2d9dbe389e/093624942788.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/christmas/669854820"
+    },
+    {
+      "slug": "babel",
+      "label": "Babel",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/62/Babelcoverart.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Babel_(Mumford_%26_Sons_album)"
+    },
+    {
+      "slug": "starboy",
+      "label": "Starboy",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/starboy/1440870373"
+    },
+    {
+      "slug": "scorpion",
+      "label": "Scorpion",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/scorpion/1406109769"
+    },
+    {
+      "slug": "hollywood-s-bleeding",
+      "label": "Hollywood's Bleeding",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6c/13/27/6c13279a-399b-2631-3cb2-6233a91d7a53/19UMGIM78325.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/hollywoods-bleeding/1477886950"
+    },
+    {
+      "slug": "reputation",
+      "label": "Reputation",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/eb/e6/06/ebe606da-e00f-82d3-47f3-b79904eed541/17UM1IM24651.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/reputation/1440933849"
+    },
+    {
+      "slug": "a-star-is-born",
+      "label": "A Star Is Born",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e0/A_Star_Is_Born_%282018_soundtrack%29.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_soundtrack)"
+    },
+    {
+      "slug": "divide",
+      "label": "÷ (Divide)",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/2d/1c/4f/2d1c4fd7-018c-0529-693b-c67fea53b698/190295851286.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/1193700601"
+    },
+    {
+      "slug": "beerbongs-and-bentleys",
+      "label": "beerbongs & bentleys",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/9f/fb/559ffb75-3c00-abd6-7b1f-8b6b1518b173/18UMGIM22101.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/beerbongs-bentleys/1373504837"
+    },
+    {
+      "slug": "damn",
+      "label": "DAMN.",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/damn/1440881722"
+    }
+  ]
+}

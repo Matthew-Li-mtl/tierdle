@@ -1,0 +1,118 @@
+{
+  "day": "",
+  "title": "Popular movies from the 2020s",
+  "items": [
+    {
+      "slug": "spider-man-brand-new-day",
+      "label": "Spider-Man: Brand New Day",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Spider-Man_Brand_New_Day_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Spider-Man%3A_Brand_New_Day"
+    },
+    {
+      "slug": "avatar-the-way-of-water",
+      "label": "Avatar: The Way of Water",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Avatar%3A_The_Way_of_Water"
+    },
+    {
+      "slug": "ne-zha-2",
+      "label": "Ne Zha 2",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b6/Ne_Zha_2_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Ne_Zha_2"
+    },
+    {
+      "slug": "spider-man-no-way-home",
+      "label": "Spider-Man: No Way Home",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Spider-Man%3A_No_Way_Home"
+    },
+    {
+      "slug": "zootopia-2",
+      "label": "Zootopia 2",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/6a/Zootopia_2_%282025_film%29.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Zootopia_2"
+    },
+    {
+      "slug": "inside-out-2",
+      "label": "Inside Out 2",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f7/Inside_Out_2_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "slug": "the-odyssey",
+      "label": "The Odyssey",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/90/The_Odyssey_%282026_film%29_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)"
+    },
+    {
+      "slug": "top-gun-maverick",
+      "label": "Top Gun: Maverick",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/13/Top_Gun_Maverick_Poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Top_Gun%3A_Maverick"
+    },
+    {
+      "slug": "avatar-fire-and-ash",
+      "label": "Avatar: Fire and Ash",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/95/Avatar_Fire_and_Ash_poster.jpeg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Avatar%3A_Fire_and_Ash"
+    },
+    {
+      "slug": "barbie",
+      "label": "Barbie",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Barbie_(film)"
+    },
+    {
+      "slug": "the-super-mario-bros-movie",
+      "label": "The Super Mario Bros. Movie",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/The_Super_Mario_Bros._Movie_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/The_Super_Mario_Bros._Movie"
+    },
+    {
+      "slug": "deadpool-and-wolverine",
+      "label": "Deadpool & Wolverine",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine"
+    },
+    {
+      "slug": "toy-story-5",
+      "label": "Toy Story 5",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/08/Toy_Story_5_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Toy_Story_5"
+    },
+    {
+      "slug": "moana-2",
+      "label": "Moana 2",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/73/Moana_2_poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Moana_2"
+    },
+    {
+      "slug": "lilo-and-stitch",
+      "label": "Lilo & Stitch",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/56/Lilo_%26_Stitch_2025_Theatrical_Poster.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_(2025_film)"
+    },
+    {
+      "slug": "michael",
+      "label": "Michael",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/37/Michael_%282026_film_poster%29.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Michael_(2026_film)"
+    }
+  ]
+}

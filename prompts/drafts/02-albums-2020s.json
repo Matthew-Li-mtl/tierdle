@@ -1,0 +1,146 @@
+{
+  "day": "",
+  "title": "Popular albums from the 2020s",
+  "items": [
+    {
+      "slug": "one-thing-at-a-time",
+      "label": "One Thing at a Time",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/db/9f/8e/db9f8e0c-d947-b7fd-cc93-a832c81ce4ee/00602455241252_Cover.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/one-thing-at-a-time/1818408501"
+    },
+    {
+      "slug": "the-tortured-poets-department",
+      "label": "The Tortured Poets Department",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6b/7d/61/6b7d61e4-e6f1-83bc-d645-463aa06b33c4/24UMGIM29563.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/the-tortured-poets-department/1736268215"
+    },
+    {
+      "slug": "un-verano-sin-ti",
+      "label": "Un Verano Sin Ti",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/60/Bad_Bunny_-_Un_Verano_Sin_Ti.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Un_Verano_Sin_Ti"
+    },
+    {
+      "slug": "sos",
+      "label": "SOS",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/62/93/13/6293132e-20ff-67ab-3d1f-96bb6797a6ba/196589564955.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/sos/1658650093"
+    },
+    {
+      "slug": "i-m-the-problem",
+      "label": "I'm the Problem",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fa/60/fe/fa60fe4a-4329-a0bb-eb7c-3b6094a4d831/25UMGIM46049.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/im-the-problem/1802103906"
+    },
+    {
+      "slug": "dangerous-the-double-album",
+      "label": "Dangerous: The Double Album",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/68/05/ab/6805abb2-10d1-35cb-aa84-71386b285b7d/00602435514642_Cover.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/dangerous-the-double-album/1818469543"
+    },
+    {
+      "slug": "the-life-of-a-showgirl",
+      "label": "The Life of a Showgirl",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/0c/5a/300c5a57-d3be-a170-f880-f63380ca6312/25UM1IM19577.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/the-life-of-a-showgirl/1842897453"
+    },
+    {
+      "slug": "encanto-original-motion-picture-soundtrack",
+      "label": "Encanto (Original Motion Picture Soundtrack)",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/94/4d/9a/944d9a8d-0549-f537-5706-5b083bd84a7d/21UM1IM38949.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/encanto-original-motion-picture-soundtrack/1594677532"
+    },
+    {
+      "slug": "folklore",
+      "label": "Folklore",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7c/04/ba/7c04ba17-2ff8-21b3-0ac0-7d141f86e924/20UMGIM64216.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/folklore/1524793738"
+    },
+    {
+      "slug": "30",
+      "label": "30",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/73/6d/7c/736d7cfb-c79d-c9a9-4170-5e71d008dea1/886449666430.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/30/1590035691"
+    },
+    {
+      "slug": "midnights",
+      "label": "Midnights",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/67/b5/01/67b501d5-362e-797e-7dbd-942b9e273084/22UM1IM24801.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/midnights/1649434996"
+    },
+    {
+      "slug": "1989-taylor-s-version",
+      "label": "1989 (Taylor's Version)",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/a6/80/11a680e6-2e48-08fa-5e87-3f18e838d31f/23UM1IM11868.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/1989-taylors-version/1708308989"
+    },
+    {
+      "slug": "my-turn",
+      "label": "My Turn",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b8/e4/29/b8e429b5-54b7-6ba3-a2db-29b426dc2b45/20UMGIM04592.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/my-turn/1499567361"
+    },
+    {
+      "slug": "sour",
+      "label": "Sour",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/ed/8c/02ed8cab-c089-2fdd-7ce6-ab334a9a4e19/21UMGIM26093.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/sour/1560734944"
+    },
+    {
+      "slug": "certified-lover-boy",
+      "label": "Certified Lover Boy",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/cb/6b/5f/cb6b5fc3-8d35-908a-18e6-6f8eda46ce11/21UM1IM07521.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/certified-lover-boy/1584449196"
+    },
+    {
+      "slug": "after-hours",
+      "label": "After Hours",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/b9/fe/2bb9fef5-d7f3-8345-25a9-db0e79fde4e4/20UMGIM11048.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/after-hours/1499385848"
+    },
+    {
+      "slug": "evermore",
+      "label": "Evermore",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/82/33/6e/82336ed3-3d1b-e920-b0a7-61775acd0f33/20UM1IM14847.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/evermore/1544275966"
+    },
+    {
+      "slug": "utopia",
+      "label": "Utopia",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7d/4f/94/7d4f9468-56e1-3a2d-7186-c8088170ef58/196871341899.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/utopia/1708274558"
+    },
+    {
+      "slug": "short-n-sweet",
+      "label": "Short n' Sweet",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/1c/ca/a11ccab6-7d4c-e041-d028-998bcebeb709/24UMGIM61704.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/short-n-sweet/1752214909"
+    },
+    {
+      "slug": "debi-tirar-mas-fotos",
+      "label": "Debí Tirar Más Fotos",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/ef/Bad_Bunny_-_Deb%C3%AD_Tirar_M%C3%A1s_Fotos.png",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Deb%C3%AD_Tirar_M%C3%A1s_Fotos"
+    }
+  ]
+}

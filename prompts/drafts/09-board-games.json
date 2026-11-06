@@ -1,0 +1,111 @@
+{
+  "day": "",
+  "title": "Popular board games",
+  "items": [
+    {
+      "slug": "monopoly",
+      "label": "Monopoly",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Monopoly_board_on_white_bg.jpg/330px-Monopoly_board_on_white_bg.jpg",
+      "credit": "GFDL 1.2, via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Monopoly_(game)"
+    },
+    {
+      "slug": "scrabble",
+      "label": "Scrabble",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Scrabble_game_in_progress.jpg/330px-Scrabble_game_in_progress.jpg",
+      "credit": "thebarrowboy, CC BY 2.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Scrabble"
+    },
+    {
+      "slug": "clue",
+      "label": "Clue",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Cluedo_Clue_pack_logo.png/330px-Cluedo_Clue_pack_logo.png",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Cluedo"
+    },
+    {
+      "slug": "trivial-pursuit",
+      "label": "Trivial Pursuit",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Trivial_pursuit_classic_edition_cover.jpg/330px-Trivial_pursuit_classic_edition_cover.jpg",
+      "credit": "Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Trivial_Pursuit"
+    },
+    {
+      "slug": "candy-land",
+      "label": "Candy Land",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/46/Candy_land_mb_cover_1949.jpg/330px-Candy_land_mb_cover_1949.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Candy_Land"
+    },
+    {
+      "slug": "rummikub",
+      "label": "Rummikub",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rummikub_Tiles.jpg/330px-Rummikub_Tiles.jpg",
+      "credit": "ryan harvey, CC BY-SA 2.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Rummikub"
+    },
+    {
+      "slug": "othello",
+      "label": "Othello",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Othello_Spielbrett.jpg/330px-Othello_Spielbrett.jpg",
+      "credit": "Neuhaus, CC BY-SA 4.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Reversi"
+    },
+    {
+      "slug": "pictionary",
+      "label": "Pictionary",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Pictionary_Party.jpg/330px-Pictionary_Party.jpg",
+      "credit": "User François Haffner on fr.wikipedia, Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Pictionary"
+    },
+    {
+      "slug": "catan",
+      "label": "Catan",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a3/Catan-2015-boxart.jpg",
+      "credit": "© rights holder (Fair use), via Wikipedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Catan"
+    },
+    {
+      "slug": "the-game-of-life",
+      "label": "The Game of Life",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Game_of_Life_%E4%BA%BA%E7%94%9F%E3%82%B2%E3%83%BC%E3%83%A0_DSCF2280.jpg/330px-The_Game_of_Life_%E4%BA%BA%E7%94%9F%E3%82%B2%E3%83%BC%E3%83%A0_DSCF2280.jpg",
+      "credit": "松岡明芳, CC BY-SA 3.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/The_Game_of_Life"
+    },
+    {
+      "slug": "stratego",
+      "label": "Stratego",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Essen_2008_50016.jpg/330px-Essen_2008_50016.jpg",
+      "credit": "Matěj Baťha, CC BY-SA 3.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Stratego"
+    },
+    {
+      "slug": "battleship",
+      "label": "Battleship",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Hra_n%C3%A1mo%C5%99n%C3%AD_bitva_%281%29.jpg/330px-Hra_n%C3%A1mo%C5%99n%C3%AD_bitva_%281%29.jpg",
+      "credit": "CC BY-SA 3.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Battleship_(game)"
+    },
+    {
+      "slug": "chess",
+      "label": "Chess",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/330px-ChessSet.jpg",
+      "credit": "Alan Light, CC BY-SA 3.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Chess"
+    },
+    {
+      "slug": "checkers",
+      "label": "Checkers",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/CheckersStandard.jpg/330px-CheckersStandard.jpg",
+      "credit": "Jud McCranie, CC BY 3.0, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Checkers"
+    },
+    {
+      "slug": "backgammon",
+      "label": "Backgammon",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Backgammon_lg.png/330px-Backgammon_lg.png",
+      "credit": "Ptkfgs, Public domain, via Wikimedia",
+      "creditUrl": "https://en.wikipedia.org/wiki/Backgammon"
+    }
+  ]
+}

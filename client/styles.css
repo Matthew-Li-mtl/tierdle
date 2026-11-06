@@ -1,0 +1,273 @@
+/* All colors live here. Everything is flat: no gradients, shadows, or rounded corners. */
+:root {
+  --background: #1a1a17;
+  --surface: #2c2c28;
+  --line: #000000;
+  --text: #ffffff;
+  --muted: #b8b8b0;
+  --primary: #0080ff;
+  --error: #ff4040;
+  --tier-s: #ff0000;
+  --tier-a: #ff8000;
+  --tier-b: #ffbf00;
+  --tier-c: #ffff00;
+  --tier-d: #80ff00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+a {
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--error);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--line);
+}
+
+.logo {
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: #000000;
+}
+
+.button:disabled {
+  background: var(--surface);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+/* Tier rows */
+.tiers {
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  margin-bottom: 16px;
+}
+
+.tier {
+  display: flex;
+  min-height: 88px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tier-label {
+  display: flex;
+  flex: 0 0 64px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-right: 1px solid var(--line);
+  color: #000000;
+  font: inherit;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+button.tier-label {
+  cursor: pointer;
+}
+
+.tier-S { background: var(--tier-s); }
+.tier-A { background: var(--tier-a); }
+.tier-B { background: var(--tier-b); }
+.tier-C { background: var(--tier-c); }
+.tier-D { background: var(--tier-d); }
+
+.tier-items,
+.unranked {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: flex-start;
+  min-width: 0;
+  background: var(--surface);
+}
+
+.unranked {
+  min-height: 88px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+}
+
+/* Tiles */
+.tile {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  overflow: hidden;
+  background: var(--background);
+  outline-offset: -2px;
+}
+
+.tile[role='button'] {
+  cursor: grab;
+}
+
+.tile.selected {
+  outline: 3px solid var(--primary);
+}
+
+.tile img {
+  display: block;
+  width: 100%;
+  height: calc(100% - 18px); /* leaves room for the label */
+  object-fit: contain; /* logos and posters are not square, so never crop them */
+}
+
+.tile span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 1px 3px;
+  background: var(--line);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Feeds */
+.tabs {
+  display: flex;
+  margin: 32px 0 16px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.tab {
+  padding: 8px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: #000000;
+}
+
+.post {
+  margin-bottom: 24px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.like {
+  padding: 4px 12px;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.like.liked {
+  background: var(--tier-s);
+  color: #000000;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+  margin: 32px auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field input {
+  padding: 8px;
+  border: 1px solid var(--muted);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.credits {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 13px;
+}

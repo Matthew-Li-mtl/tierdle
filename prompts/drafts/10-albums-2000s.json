@@ -1,0 +1,132 @@
+{
+  "day": "",
+  "title": "Popular albums from the 2000s",
+  "items": [
+    {
+      "slug": "fearless",
+      "label": "Fearless",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cb/6e/a7/cb6ea70a-6cb8-89a0-4da7-91e2d04a7bba/08PNDIM05386.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/fearless/1440924803"
+    },
+    {
+      "slug": "confessions",
+      "label": "Confessions",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/c6/e1/02c6e1cd-8d57-97b4-6ef1-77d2be004509/mzi.sjrqsmrq.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/confessions-expanded-edition/386153476"
+    },
+    {
+      "slug": "no-strings-attached",
+      "label": "No Strings Attached",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/36/22/d6/3622d665-873c-57b8-392b-971292e6086f/012414170224.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/no-strings-attached/303171298"
+    },
+    {
+      "slug": "the-marshall-mathers-lp",
+      "label": "The Marshall Mathers LP",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ea/ac/03/eaac03e5-8e9d-847e-d5b9-af7dee6a970b/00606949063221.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/the-marshall-mathers-lp/1440906504"
+    },
+    {
+      "slug": "1",
+      "label": "1",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f2/98/fb/f298fb48-1e0e-6ad4-4cff-fb824b77f02e/15UMGIM59587.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/1/1440833098"
+    },
+    {
+      "slug": "weathered",
+      "label": "Weathered",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e0/6a/6a/e06a6a56-71cb-df21-526b-72b33ef3b43f/14CMGIM00789.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/weathered/1440738578"
+    },
+    {
+      "slug": "speakerboxxx-the-love-below",
+      "label": "Speakerboxxx/The Love Below",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/71/ae/6a/71ae6a46-99a6-e9d8-d7f3-41c0f2df45c4/196872579123.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/speakerboxxx-the-love-below/1774798661"
+    },
+    {
+      "slug": "hot-shot",
+      "label": "Hot Shot",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5b/78/c0/5b78c053-c5d5-5414-6d95-2a9ab3d3c7a6/06UMGIM55575.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/hot-shot/1449315854"
+    },
+    {
+      "slug": "the-eminem-show",
+      "label": "The Eminem Show",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/dd/5c/e6/dd5ce621-f7d2-f767-7a08-e7a7eaa7870b/00602537526994.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/the-eminem-show/1440821542"
+    },
+    {
+      "slug": "get-rich-or-die-tryin",
+      "label": "Get Rich or Die Tryin'",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/25/ac/dc/25acdc1a-8a13-e70d-fbed-bce268e8fea8/06UMGIM08757.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/get-rich-or-die-tryin/6811474787"
+    },
+    {
+      "slug": "feels-like-home",
+      "label": "Feels Like Home",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/16/bf/bd/16bfbd53-3e83-c840-bdf6-053326af381b/05099946404855.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/feels-like-home/721258539"
+    },
+    {
+      "slug": "the-massacre",
+      "label": "The Massacre",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b6/50/07/b650079b-15db-74fb-5395-ff7ef7c5a45e/17UMGIM93593.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/the-massacre/1444007100"
+    },
+    {
+      "slug": "country-grammar",
+      "label": "Country Grammar",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/86/ea/41/86ea41d4-5d1f-b342-da08-dd43294d8fad/06UMGIM14203.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/country-grammar/1440782396"
+    },
+    {
+      "slug": "up",
+      "label": "Up!",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7f/73/35/7f7335c6-9d1b-904d-5531-ddec9096e5a5/10UMGIM12743.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/up-red-pop-and-green-country-versions/1440869101"
+    },
+    {
+      "slug": "noel",
+      "label": "Noël",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/b9/1b/f3/b91bf368-36d0-2569-b496-b87d3a41f20a/093624940388.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/no%C3%ABl/738166403"
+    },
+    {
+      "slug": "come-away-with-me",
+      "label": "Come Away with Me",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/80/7b/02/807b023b-fb9e-de08-4c62-dd45d7d2317e/22UMGIM10696.rgb.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/come-away-with-me-super-deluxe-edition/1625058458"
+    },
+    {
+      "slug": "hybrid-theory",
+      "label": "Hybrid Theory",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f0/31/b2/f031b2b2-bcf0-6102-426f-e0b2c7437415/dj.vrgpwamf.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/hybrid-theory/528436018"
+    },
+    {
+      "slug": "oops-i-did-it-again",
+      "label": "Oops!... I Did It Again",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/9d/97/d59d9769-1369-854f-1681-4901a6d8361b/012414170422.jpg/300x300bb.jpg",
+      "credit": "© rights holder, via Apple Music",
+      "creditUrl": "https://music.apple.com/us/album/oops-i-did-it-again/267954486"
+    }
+  ]
+}
