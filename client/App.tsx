@@ -1,5 +1,6 @@
 // The header that appears on every page, and which page to show for each URL.
 import { Link, Route, Routes } from 'react-router-dom';
+import { TIERS } from '../shared/types.js';
 import { useAuth } from './auth.js';
 import { ForgotPassword, ResetPassword, SignIn, SignUp } from './pages/AuthPages.js';
 import Home from './pages/Home.js';
@@ -10,8 +11,13 @@ export default function App() {
   return (
     <>
       <header className="header">
-        <Link to="/" className="logo">
-          TIERDLE
+        {/* Seven letters for seven tiers: T is colored like SS, and the last E like F. */}
+        <Link to="/" className="logo" aria-label="Tierdle home">
+          {[...'TIERDLE'].map((letter, index) => (
+            <span key={index} style={{ color: `var(--tier-${TIERS[index].toLowerCase()})` }}>
+              {letter}
+            </span>
+          ))}
         </Link>
         {user ? (
           <div className="header-user">

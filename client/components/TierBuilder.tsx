@@ -28,10 +28,24 @@ function loadRows(prompt: Prompt): Rows {
   return emptyRows(prompt);
 }
 
-export default function TierBuilder(props: { prompt: Prompt; onPosted: (post: PostView) => void }) {
-  const { prompt, onPosted } = props;
+// Starts from a list that was already posted, when editing it. Unplaced items go back to unranked.
+function rowsFrom(prompt: Prompt, tiers: Tiers): Rows {
+  const slugs = prompt.items.map((item) => item.slug);
+  const rows = emptyRows(prompt);
+  for (const tier of TIERS) rows[tier] = tiers[tier].filter((slug) => slugs.includes(slug));
+  const placed = new Set(TIERS.flatMap((tier) => rows[tier]));
+  rows.unranked = slugs.filter((slug) => !placed.has(slug));
+  return rows;
+}
+
+export default function TierBuilder(props: {
+  prompt: Prompt;
+  onPosted: (post: PostView) => void;
+  startFrom?: Tiers; // the list being edited, if any
+}) {
+  const { prompt, onPosted, startFrom } = props;
   const { user } = useAuth();
-  const [rows, setRows] = useState<Rows>(() => loadRows(prompt));
+  const [rows, setRows] = useState<Rows>(() => (startFrom ? rowsFrom(prompt, startFrom) : loadRows(prompt)));
   const [selected, setSelected] = useState<string | null>(null);
   const [error, setError] = useState('');
 

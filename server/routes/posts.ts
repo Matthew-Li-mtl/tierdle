@@ -125,7 +125,28 @@ router.post('/posts', readUser, requireUser, async (req, res) => {
   }
 });
 
-// Finds the post a rating route is about, or replies 404.
+// Deletes your own post for today, and every rating it got, so you can post a new list.
+// Older days are left alone: they cannot be posted again, so deleting one would only lose it.
+router.delete('/posts/:id', readUser, requireUser, async (req, res) => {
+  const post = await findPost(req, res);
+  if (!post) return;
+  if (post.user.toString() !== req.user!.id) {
+    res.status(403).json({ error: 'You can only edit your own tier list.' });
+    return;
+  }
+  if (post.day !== today()) {
+    res.status(409).json({ error: 'Only today’s tier list can be edited.' });
+    return;
+  }
+
+  // The post goes first. If the ratings delete then failed, the leftovers would point at
+  // a post that no longer exists, and nothing ever reads them.
+  await Post.deleteOne({ _id: post._id });
+  await Rating.deleteMany({ post: post._id });
+  res.json({ ok: true });
+});
+
+// Finds the post a route is about, or replies 404.
 async function findPost(req: Request, res: Response) {
   const id = String(req.params.id);
   const post = mongoose.isValidObjectId(id) ? await Post.findById(id).lean() : null;
