@@ -226,8 +226,10 @@ button.tier-label {
 
 .post-header {
   display: flex;
+  flex-wrap: wrap; /* the rating counts drop below the name on narrow screens */
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
 }
 
@@ -236,6 +238,7 @@ button.tier-label {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   gap: 4px;
 }
 
@@ -249,8 +252,15 @@ button.tier-label {
 .rating {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px;
   margin-top: -8px;
+}
+
+/* The "Ratings on this post:" and "Rate this post:" labels. */
+.rating-counts > .muted,
+.rating > .muted {
+  margin-right: 4px;
 }
 
 .rate {

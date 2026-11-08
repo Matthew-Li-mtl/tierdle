@@ -110,27 +110,25 @@ function PostCard(props: {
   }
 
   const canRate = user && post.username !== user.username;
-  const rated = TIERS.filter((tier) => post.ratingCounts[tier] > 0);
 
   return (
     <article className="post">
       <div className="post-header">
         <strong>{post.username}</strong>
-        {rated.length > 0 ? (
-          <span className="rating-counts" aria-label="Ratings">
-            {rated.map((tier) => (
-              <span key={tier} className={`rating-count tier-${tier}`}>
-                {post.ratingCounts[tier]} {tier}
-              </span>
-            ))}
-          </span>
-        ) : (
-          <span className="muted">No ratings yet</span>
-        )}
+        {/* Every tier is shown, including those with no ratings yet. */}
+        <span className="rating-counts">
+          <span className="muted">Ratings on this post:</span>
+          {TIERS.map((tier) => (
+            <span key={tier} className={`rating-count tier-${tier}`}>
+              {post.ratingCounts[tier]} {tier}
+            </span>
+          ))}
+        </span>
       </div>
       <TierRows tiers={post.tiers} items={items} />
       {canRate ? (
         <div className="rating" role="group" aria-label={`Rate ${post.username}'s list`}>
+          <span className="muted">Rate this post:</span>
           {TIERS.map((tier) => (
             <button
               key={tier}
