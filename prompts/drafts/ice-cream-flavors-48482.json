@@ -1,0 +1,142 @@
+{
+  "day": "",
+  "title": "Ice Cream Flavors",
+  "tiers": [
+    "S",
+    "A",
+    "B",
+    "C",
+    "D",
+    "F"
+  ],
+  "source": {
+    "label": "TierMaker community ranking (1,848 lists)",
+    "url": "https://tiermaker.com/categories/food-and-drink/ice-cream-flavors-48482"
+  },
+  "author": {
+    "name": "inglese_daniel",
+    "url": "https://tiermaker.com/user/48482"
+  },
+  "items": [
+    {
+      "slug": "cookies-n-cream",
+      "label": "Cookies n' Cream",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-93830-pmpng",
+      "tier": 0,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "cookie-dough",
+      "label": "Cookie Dough",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-92712-pmpng",
+      "tier": 0,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "vanilla",
+      "label": "Vanilla",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-92056-pmpng",
+      "tier": 0,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "chocolate",
+      "label": "Chocolate",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-91946-pmpng",
+      "tier": 1,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "mint-chocolate-chip",
+      "label": "Mint Chocolate Chip",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-91216-pmpng",
+      "tier": 1,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "double-chocolate",
+      "label": "Double Chocolate",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-94718-pmpng",
+      "tier": 1,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "strawberry",
+      "label": "Strawberry",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-93238-pmpng",
+      "tier": 1,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "rocky-road",
+      "label": "Rocky Road",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-95334-pmpng",
+      "tier": 2,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "coffee",
+      "label": "Coffee",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/zz1557633238screen-shot-2019-05-11-at-115243-pmpng",
+      "tier": 3,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "rainbow-sherbet",
+      "label": "Rainbow Sherbet",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-92437-pmpng",
+      "tier": 3,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "moose-tracks",
+      "label": "Moose Tracks",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-95601-pmpng",
+      "tier": 3,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "butter-pecan",
+      "label": "Butter Pecan",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-94222-pmpng",
+      "tier": 3,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "banana",
+      "label": "Banana",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/zz1557633238screen-shot-2019-05-11-at-114928-pmpng",
+      "tier": 4,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "pistachio",
+      "label": "Pistachio",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/zz1557633238screen-shot-2019-05-11-at-114724-pmpng",
+      "tier": 4,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    },
+    {
+      "slug": "dinosaur-crunch",
+      "label": "Dinosaur Crunch",
+      "imageUrl": "https://tiermaker.com/images/chart/chart/ice-cream-flavors-48482/screen-shot-2019-05-11-at-91653-pmpng",
+      "tier": 5,
+      "credit": "friendlys.com, as credited by the template on TierMaker",
+      "creditUrl": "https://www.friendlys.com/ice-cream-item/classic-chocolate/"
+    }
+  ]
+}

@@ -15,9 +15,9 @@ export async function sendPasswordResetEmail(to: string, token: string) {
     auth: { user: env('GMAIL_USER'), pass: env('GMAIL_APP_PASSWORD') },
   });
   await transport.sendMail({
-    from: `Tierdle <${env('GMAIL_USER')}>`,
+    from: `Tierguessr <${env('GMAIL_USER')}>`,
     to,
-    subject: 'Reset your Tierdle password',
+    subject: 'Reset your Tierguessr password',
     text: `Use this link to choose a new password. It works once and expires in 1 hour.\n\n${link}\n\nIf you did not ask for this, you can ignore this email.`,
   });
 }

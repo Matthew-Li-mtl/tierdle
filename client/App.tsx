@@ -1,8 +1,8 @@
 // The header that appears on every page, and which page to show for each URL.
 import { Link, Route, Routes } from 'react-router-dom';
-import { TIERS } from '../shared/types.js';
 import { useAuth } from './auth.js';
 import { ForgotPassword, ResetPassword, SignIn, SignUp } from './pages/AuthPages.js';
+import History from './pages/History.js';
 import Home from './pages/Home.js';
 
 export default function App() {
@@ -11,16 +11,17 @@ export default function App() {
   return (
     <>
       <header className="header">
-        {/* Seven letters for seven tiers: T is colored like SS, and the last E like F. */}
-        <Link to="/" className="logo" aria-label="Tierdle home">
-          {[...'TIERDLE'].map((letter, index) => (
-            <span key={index} style={{ color: `var(--tier-${TIERS[index].toLowerCase()})` }}>
+        {/* Ten letters for the ten tier colors: T is the top tier's red, the final R the tenth tier's. */}
+        <Link to="/" className="logo" aria-label="Tierguessr home">
+          {[...'TIERGUESSR'].map((letter, index) => (
+            <span key={index} style={{ color: `var(--tier-${index})` }}>
               {letter}
             </span>
           ))}
         </Link>
         {user ? (
           <div className="header-user">
+            <Link to="/history">History</Link>
             <span>{user.username}</span>
             <button className="button" onClick={signOut}>
               Sign out
@@ -35,6 +36,7 @@ export default function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

@@ -1,5 +1,5 @@
 {
-  "name": "tierdle",
+  "name": "tierguessr",
   "private": true,
   "type": "module",
   "engines": {
@@ -11,7 +11,8 @@
     "typecheck": "tsc",
     "build": "tsc && vite build",
     "publish-prompt": "tsx --env-file=.env server/publishPrompt.ts",
-    "test-prompt": "tsx --env-file=.env server/publishTestPrompt.ts"
+    "test-prompt": "tsx --env-file=.env server/publishTestPrompt.ts",
+    "import-page": "tsx server/importSavedPage.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
