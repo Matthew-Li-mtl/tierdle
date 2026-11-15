@@ -1,6 +1,5 @@
 // Every MongoDB collection in the app is defined in this one file.
 import mongoose, { Schema } from 'mongoose';
-import { TIERS } from '../shared/types.js';
 
 const userSchema = new Schema({
   email: { type: String, required: true, unique: true },
@@ -16,6 +15,7 @@ const itemSchema = new Schema(
     imageUrl: { type: String, required: true },
     credit: String,
     creditUrl: String,
+    tier: { type: Number, required: true }, // the community's tier: the answer, never sent to the browser
   },
   { _id: false },
 );
@@ -23,43 +23,34 @@ const itemSchema = new Schema(
 const promptSchema = new Schema({
   day: { type: String, required: true, unique: true }, // "YYYY-MM-DD" in UTC
   title: { type: String, required: true },
+  tiers: { type: [String], required: true }, // tier names, best first
   items: { type: [itemSchema], required: true },
+  source: { label: String, url: String }, // credit for the community ranking
+  author: { name: String, url: String }, // credit for whoever made the original template
 });
 export const Prompt = mongoose.model('Prompt', promptSchema);
 
-const postSchema = new Schema(
+// One guess by a signed-in user. Each user gets MAX_GUESSES per day, numbered from 1.
+const attemptSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    username: { type: String, required: true }, // copied from User so feeds need no join
     day: { type: String, required: true },
-    tiers: {
-      SS: [String],
-      S: [String],
-      A: [String],
-      B: [String],
-      C: [String],
-      D: [String],
-      F: [String],
-    },
-    // Copies of what the ratings add up to, so feeds need no counting.
-    // score is the points total the popular feed sorts by. It is never sent to the browser.
-    score: { type: Number, default: 0 },
-    ratingCounts: Object.fromEntries(TIERS.map((tier) => [tier, { type: Number, default: 0 }])),
+    number: { type: Number, required: true }, // 1 for the day's first guess, and so on
+    title: { type: String, required: true }, // copied from the prompt so history needs no join
+    placements: { type: Map, of: Number, required: true }, // item slug -> tier index
+    points: { type: Number, required: true },
+    maxPoints: { type: Number, required: true },
   },
   { timestamps: { createdAt: true, updatedAt: false } },
 );
-postSchema.index({ user: 1, day: 1 }, { unique: true }); // one post per user per day
-postSchema.index({ day: 1, createdAt: -1, _id: -1 }); // the recent feed
-postSchema.index({ day: 1, score: -1, _id: -1 }); // the popular feed
-export const Post = mongoose.model('Post', postSchema);
-
-const ratingSchema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  post: { type: Schema.Types.ObjectId, ref: 'Post', required: true },
-  tier: { type: String, enum: TIERS, required: true },
-});
-ratingSchema.index({ user: 1, post: 1 }, { unique: true }); // one rating per user per post
-export const Rating = mongoose.model('Rating', ratingSchema);
+attemptSchema.index({ user: 1, createdAt: -1, _id: -1 }); // the history page
+// One guess per number per user per day. Two requests at once cannot both become guess 7,
+// so nobody gets an 8th. Attempts saved before numbering existed are left out of the rule.
+attemptSchema.index(
+  { user: 1, day: 1, number: 1 },
+  { unique: true, partialFilterExpression: { number: { $exists: true } } },
+);
+export const Attempt = mongoose.model('Attempt', attemptSchema);
 
 const refreshTokenSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true },

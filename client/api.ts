@@ -18,7 +18,7 @@ async function requestRefresh(): Promise<SessionUser | null> {
 
 async function refreshWithLock(): Promise<SessionUser | null> {
   try {
-    return await navigator.locks.request('tierdle-refresh', requestRefresh);
+    return await navigator.locks.request('tierguessr-refresh', requestRefresh);
   } finally {
     refreshing = null;
   }

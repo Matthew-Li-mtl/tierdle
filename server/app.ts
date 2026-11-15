@@ -3,7 +3,7 @@ import cookieParser from 'cookie-parser';
 import express, { type NextFunction, type Request, type Response } from 'express';
 import { connectDb } from './db.js';
 import authRoutes from './routes/auth.js';
-import postRoutes from './routes/posts.js';
+import gameRoutes from './routes/game.js';
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use('/api', async (_req, _res, next) => {
   next();
 });
 app.use('/api/auth', authRoutes);
-app.use('/api', postRoutes);
+app.use('/api', gameRoutes);
 
 app.use('/api', (_req, res) => {
   res.status(404).json({ error: 'Not found.' });

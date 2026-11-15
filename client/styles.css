@@ -7,13 +7,17 @@
   --muted: #b8b8b0;
   --primary: #0080ff;
   --error: #ff4040;
-  --tier-ss: #ff00bf;
-  --tier-s: #ff0000;
-  --tier-a: #ff8000;
-  --tier-b: #ffbf00;
-  --tier-c: #ffff00;
-  --tier-d: #80ff00;
-  --tier-f: #a0a0a0;
+  /* Tier colors go by position: 0 is the top tier, whatever it is called. */
+  --tier-0: #ff0000;
+  --tier-1: #ff8000;
+  --tier-2: #ffbf00;
+  --tier-3: #ffff00;
+  --tier-4: #80ff00;
+  --tier-5: #00ff80;
+  --tier-6: #00ffff;
+  --tier-7: #0080ff;
+  --tier-8: #a080ff;
+  --tier-9: #ff00ff;
 }
 
 * {
@@ -127,22 +131,35 @@ a {
   border: 0;
   border-right: 1px solid var(--line);
   color: #000000;
+  padding: 4px;
   font: inherit;
   font-size: 24px;
   font-weight: 800;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Tier names longer than a few letters, such as "Personal Favorite". */
+.tier-label.long {
+  flex-basis: 88px;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 button.tier-label {
   cursor: pointer;
 }
 
-.tier-SS { background: var(--tier-ss); }
-.tier-S { background: var(--tier-s); }
-.tier-A { background: var(--tier-a); }
-.tier-B { background: var(--tier-b); }
-.tier-C { background: var(--tier-c); }
-.tier-D { background: var(--tier-d); }
-.tier-F { background: var(--tier-f); }
+.tier-0 { background: var(--tier-0); }
+.tier-1 { background: var(--tier-1); }
+.tier-2 { background: var(--tier-2); }
+.tier-3 { background: var(--tier-3); }
+.tier-4 { background: var(--tier-4); }
+.tier-5 { background: var(--tier-5); }
+.tier-6 { background: var(--tier-6); }
+.tier-7 { background: var(--tier-7); }
+.tier-8 { background: var(--tier-8); }
+.tier-9 { background: var(--tier-9); }
 
 .tier-items,
 .unranked {
@@ -158,6 +175,35 @@ button.tier-label {
   min-height: 88px;
   margin-bottom: 16px;
   border: 1px solid var(--line);
+}
+
+/* After a check: a see-through gray fill as wide as the share of this tier's items that are right,
+   and that share as text on the right. The fill lies over the tiles, because tiles would hide
+   a fill drawn behind them; pointer-events: none lets taps and drags reach the tiles underneath. */
+.tier-items {
+  position: relative;
+}
+
+.tier-items.scored {
+  padding-right: 52px; /* keeps tiles clear of the percentage */
+}
+
+.tier-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  background: rgba(200, 200, 190, 0.3);
+  pointer-events: none;
+}
+
+.tier-share {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  z-index: 2;
+  transform: translateY(-50%);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Tiles */
@@ -198,93 +244,42 @@ button.tier-label {
   white-space: nowrap;
 }
 
-/* Feeds */
-.tabs {
+/* The score shown after checking a guess */
+.result {
   display: flex;
-  margin: 32px 0 16px;
-  border-bottom: 2px solid var(--primary);
-}
-
-.tab {
-  padding: 8px 16px;
-  border: 0;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.tab.active {
-  background: var(--primary);
-  color: #000000;
-}
-
-.post {
-  margin-bottom: 24px;
-}
-
-.post-header {
-  display: flex;
-  flex-wrap: wrap; /* the rating counts drop below the name on narrow screens */
-  justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-left: 8px solid var(--primary);
 }
 
-/* How many people gave each rating, shown beside the username. */
-.rating-counts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 4px;
-}
-
-.rating-count {
-  padding: 2px 6px;
-  color: #000000;
-  font-weight: 700;
-}
-
-/* Rating buttons under someone else's post. The tier-* classes give each its color. */
-.rating {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  margin-top: -8px;
-}
-
-/* The "Ratings on this post:" and "Rate this post:" labels. */
-.rating-counts > .muted,
-.rating > .muted {
-  margin-right: 4px;
-}
-
-.rate {
-  min-width: 44px;
-  padding: 6px 8px;
-  border: 3px solid transparent;
-  color: #000000;
-  font: inherit;
+.result-accuracy {
+  font-size: 32px;
   font-weight: 800;
-  cursor: pointer;
-  opacity: 0.55;
 }
 
-.rate:hover,
-.rate.chosen {
-  opacity: 1;
+/* History page */
+.history {
+  width: 100%;
+  margin-bottom: 16px;
+  border-collapse: collapse;
 }
 
-.rate.chosen {
-  border-color: var(--text);
+.history th,
+.history td {
+  padding: 8px;
+  border-bottom: 1px solid var(--surface);
+  text-align: left;
 }
 
-.rate:disabled {
-  cursor: wait;
+.history td:nth-child(3),
+.history td:nth-child(4),
+.history th:nth-child(3),
+.history th:nth-child(4) {
+  text-align: right;
+  white-space: nowrap;
 }
 
 /* Forms */
@@ -310,8 +305,65 @@ button.tier-label {
   font: inherit;
 }
 
-.credits {
+/* Where today's answers come from, always shown under the list. */
+.attribution {
   margin-top: 32px;
   color: var(--muted);
+}
+
+.attribution.author {
+  margin-top: 4px;
+}
+
+.credits {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Today's guesses: one row per guess, with a bar as long as its accuracy. */
+.guess-chart {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guess {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.guess-number {
+  flex: 0 0 16px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.guess-track {
+  flex: 1;
+  height: 14px;
+  background: var(--surface);
+}
+
+.guess-bar {
+  display: block;
+  height: 100%;
+  background: var(--muted);
+}
+
+.guess.best .guess-bar {
+  background: var(--primary);
+}
+
+.guess-accuracy {
+  flex: 0 0 52px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.button.small {
+  padding: 2px 8px;
   font-size: 13px;
 }

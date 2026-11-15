@@ -1,7 +1,4 @@
-# Tierdle
+# Tierguessr
 
-Make a tier list from the same daily prompt as everyone else, and vote on others' posts!
-
-https://daily-tierdle.vercel.app
-
-Typescript, React, Express, MongoDB, Vercel.
+Can you guess how the internet ranked these items?
+Updated daily with hand-picked tier lists from Tier Maker.
