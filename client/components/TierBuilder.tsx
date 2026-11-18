@@ -4,6 +4,7 @@ import { useEffect, useState, type DragEvent, type KeyboardEvent } from 'react';
 import type { GuessRecord, GuessResponse, Item, Placements, Prompt } from '../../shared/types.js';
 import { api } from '../api.js';
 import GuessChart from './GuessChart.js';
+import GuessPreview, { TierShare, hasShare } from './GuessPreview.js';
 import Tile from './Tile.js';
 
 // One row per tier, named by its position ("0" is the top tier), plus the unranked pile.
@@ -30,18 +31,6 @@ function loadRows(prompt: Prompt): Rows {
   return emptyRows(prompt);
 }
 
-// The rows a saved guess had. Items keep the list's order within each tier.
-function rowsFrom(prompt: Prompt, placements: Placements): Rows {
-  const rows = emptyRows(prompt);
-  rows.unranked = [];
-  for (const item of prompt.items) {
-    const tier = placements[item.slug];
-    if (rows[tier] === undefined) rows.unranked.push(item.slug); // not in this guess; should not happen
-    else rows[tier].push(item.slug);
-  }
-  return rows;
-}
-
 export default function TierBuilder(props: {
   prompt: Prompt;
   guesses: GuessRecord[];
@@ -53,6 +42,7 @@ export default function TierBuilder(props: {
   const [selected, setSelected] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [previewing, setPreviewing] = useState<number | null>(null); // guess number shown read-only below
 
   // Saved after every change. The guess stays after checking it, so the next attempt can start from it.
   useEffect(() => {
@@ -146,13 +136,13 @@ export default function TierBuilder(props: {
         ? `Place ${left} more ${left === 1 ? 'item' : 'items'}`
         : `Check my guess (${guessesLeft} ${guessesLeft === 1 ? 'guess' : 'guesses'} left)`;
 
-  // The checked guess the board matches right now, if any: just after checking, after Restore,
-  // or after a reload. Its per-tier results are drawn inside the tiers. Moving a tile makes the
+  // The checked guess the board matches right now, if any: just after checking, or after a reload. Its per-tier results are drawn inside the tiers. Moving a tile makes the
   // board differ, so the results disappear rather than describe tiles that have moved.
   const current = placementsOf(rows);
   const sameAsBoard = (guess: GuessRecord) =>
     left === 0 && prompt.items.every((item) => guess.placements[item.slug] === current[item.slug]);
   const shown = [...guesses].reverse().find(sameAsBoard);
+  const previewGuess = guesses.find((guess) => guess.number === previewing);
 
   return (
     <section>
@@ -160,7 +150,6 @@ export default function TierBuilder(props: {
         {prompt.tiers.map((name, index) => {
           // Of the items in this tier, the share the community also put here. Empty tiers show nothing.
           const result = shown?.tierResults?.[index];
-          const share = result && result.placed > 0 ? result.correct / result.placed : null;
           return (
             <div
               className="tier"
@@ -177,20 +166,10 @@ export default function TierBuilder(props: {
                 {name}
               </button>
               <div
-                className={share === null ? 'tier-items' : 'tier-items scored'}
+                className={hasShare(result) ? 'tier-items scored' : 'tier-items'}
                 onClick={() => selected && move(selected, String(index))}
               >
-                {share !== null && (
-                  <>
-                    <span className="tier-fill" style={{ width: `${share * 100}%` }} aria-hidden="true" />
-                    <span
-                      className="tier-share"
-                      aria-label={`${result!.correct} of ${result!.placed} correct in tier ${name}`}
-                    >
-                      {Math.round(share * 100)}%
-                    </span>
-                  </>
-                )}
+                <TierShare result={result} tierName={name} />
                 {renderTiles(String(index))}
               </div>
             </div>
@@ -212,14 +191,9 @@ export default function TierBuilder(props: {
         {buttonText}
       </button>
 
-      {/* Restoring only changes the tiers on screen. It does not use up a guess. */}
-      <GuessChart
-        guesses={guesses}
-        onRestore={(placements) => {
-          setSelected(null);
-          setRows(rowsFrom(prompt, placements));
-        }}
-      />
+      {/* Previewing shows a guess below without touching the tiers above, and does not use up a guess. */}
+      <GuessChart guesses={guesses} previewing={previewing} onPreview={setPreviewing} />
+      {previewGuess && <GuessPreview prompt={prompt} guess={previewGuess} />}
     </section>
   );
 }

@@ -403,3 +403,18 @@ button.tier-label {
   padding: 2px 8px;
   font-size: 13px;
 }
+
+/* The pressed Preview button, and the read-only guess it shows below the chart. */
+.button.small.active {
+  background: var(--primary);
+  color: #000000;
+}
+
+.guess-preview {
+  margin-top: 24px;
+}
+
+.guess-preview h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
