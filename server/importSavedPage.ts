@@ -29,8 +29,12 @@ function unescapeHtml(text: string): string {
 // "mint-chocolate-chip.png" -> "Mint Chocolate Chip". Screenshot-style names give "", meaning
 // the name is only inside the picture and must be filled in by hand.
 function labelFromFile(file: string): string {
-  const base = decodeURIComponent(file).replace(/\.(png|jpe?g|gif|webp)$/i, '').replace(/(png|jpe?g|gif|webp)$/i, '');
-  if (/screen-?shot|^\d+$|^image\d*$|^zz\d+/i.test(base)) return '';
+  const base = decodeURIComponent(file)
+    .replace(/\.(png|jpe?g|gif|webp)$/i, '')
+    .replace(/(png|jpe?g|gif|webp)$/i, '') // TierMaker often adds the old extension, as in "nycjpg.png"
+    .replace(/[-_]?\d+$/, ''); // and a number, as in "wintermelon1png.png"
+  // Names that carry no information, such as "image-2", "33" or a screenshot's date.
+  if (!base || /screen-?shot|^(image|img|photo|pic)$|^\d|^zz\d+/i.test(base)) return '';
   return base
     .replace(/[-_]+/g, ' ')
     .trim()

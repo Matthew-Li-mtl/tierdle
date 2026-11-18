@@ -260,6 +260,42 @@ button.tier-label {
   font-weight: 800;
 }
 
+/* "Score calculation" under the score: looks like a link, explains the score on hover or focus. */
+.score-help {
+  position: relative;
+  margin: -12px 0 16px;
+  font-size: 13px;
+}
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font: inherit;
+  text-decoration: underline;
+  cursor: help;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+  max-width: min(320px, 100%);
+  margin-top: 4px;
+  padding: 6px 8px;
+  border: 1px solid var(--muted);
+  background: var(--surface);
+  color: var(--text);
+  visibility: hidden;
+}
+
+.score-help:hover .tooltip,
+.score-help:focus-within .tooltip {
+  visibility: visible;
+}
+
 /* History page */
 .history {
   width: 100%;

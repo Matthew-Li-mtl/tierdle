@@ -98,6 +98,18 @@ export default function Home() {
           </span>
         </div>
       )}
+      {lastScore && (
+        // Shows on hover, and on focus so a tap or the keyboard opens it too (phones cannot hover).
+        <p className="score-help">
+          <button type="button" className="link-button" aria-describedby="score-help-tip">
+            Score calculation
+          </button>
+          <span id="score-help-tip" role="tooltip" className="tooltip">
+            Start at max points (# tiers * # items). Minus one point per tier for incorrect items. Eg. placing a B
+            tier item in D tier = -2 points. Points / max points = accuracy.
+          </span>
+        </p>
+      )}
       {best && (
         <p className="muted">
           Your best today: {percent(best)}, with {guesses.length} of {MAX_GUESSES} guesses used.

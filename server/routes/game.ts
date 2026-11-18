@@ -2,6 +2,7 @@
 import { Router } from 'express';
 import {
   MAX_GUESSES,
+  MIN_TIERS,
   scoreGuess,
   tierResults,
   type AttemptView,
@@ -54,6 +55,17 @@ function toAttemptView(attempt: any): AttemptView {
   };
 }
 
+// Whether a stored list can be played: it needs tier names and an answer for every item.
+// Lists published by the old Tierdle version have neither, and are treated as no list at all.
+function isPlayable(prompt: any): boolean {
+  return (
+    Array.isArray(prompt?.tiers) &&
+    prompt.tiers.length >= MIN_TIERS &&
+    Array.isArray(prompt.items) &&
+    prompt.items.every((item: any) => Number.isInteger(item.tier) && item.tier >= 0 && item.tier < prompt.tiers.length)
+  );
+}
+
 // The answer: item slug -> the community's tier.
 function answerOf(prompt: any): Placements {
   return Object.fromEntries(prompt.items.map((item: any) => [item.slug, item.tier]));
@@ -63,7 +75,7 @@ function answerOf(prompt: any): Placements {
 // and how each tier did, worked out again from the answer.
 // Guests get an empty list without touching the database: their browser keeps their guesses.
 async function guessesToday(userId: string | undefined, prompt: any): Promise<GuessRecord[]> {
-  if (!userId || !prompt) return [];
+  if (!userId || !isPlayable(prompt)) return [];
   const answer = answerOf(prompt);
   const attempts = await Attempt.find({ user: userId, day: prompt.day }).sort({ createdAt: 1, _id: 1 }).lean();
   return attempts.map((attempt, index) => {
@@ -97,7 +109,7 @@ router.get('/today', readUser, async (req, res) => {
   const prompt = await Prompt.findOne({ day }).lean();
   const response: TodayResponse = {
     day,
-    prompt: prompt && toPromptView(prompt),
+    prompt: isPlayable(prompt) ? toPromptView(prompt) : null,
     guesses: await guessesToday(req.user?.id, prompt),
   };
   res.json(response);
@@ -115,7 +127,7 @@ router.post('/guesses', rateLimit('guess', 120, ONE_HOUR), readUser, async (req,
     return;
   }
   const prompt = await Prompt.findOne({ day }).lean();
-  if (!prompt) {
+  if (!prompt || !isPlayable(prompt)) {
     res.status(404).json({ error: 'There is no tier list today.' });
     return;
   }
